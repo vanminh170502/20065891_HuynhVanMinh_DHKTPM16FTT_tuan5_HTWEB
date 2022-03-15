@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function kiemKT(){
+        var mauKT2=/^([a-z]+)((\s{1}[a-z]+){1,})$/;
+        var mauKT= /^[A-Za-z0-9_\.]{6,32};
+        var htKT=document.getElementById('txtUserName').value;
+        if(mauKT2.test(htKT)==true){
+            spKT.innerText="OK";  
+        }else{
+            spKT.innerText="Ki tu phai chuoi text";
+        }
+    }
+</script>
+<style>
+    form{
+        width: 500px;
+    }
+</style>
+<body>
+    <form action="" method="post">
+        <fieldset>
+            <legend>Bieu thuc chinh quy:</legend>
+            <label for="lblHT">Ho Ten: </label>
+            <input type="text" name="txtUserName" id="txtUserName" onblur="kiemKT();">
+            <span id="spKT">*</span>;
+        </fieldset>
+    </form>
+</body>
+</html>
